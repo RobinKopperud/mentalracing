@@ -40,7 +40,7 @@ if ($result->num_rows > 0) {
                 echo '<div class="timeline-event ' . $side . '">';
                 echo '    <div class="timeline-content">';
                 echo '        <div class="image-container">';
-                $image = !empty($event['image']) ? htmlspecialchars($event['image']) : 'v3.jpg';
+                $image = !empty($event['image']) ? htmlspecialchars($event['image']) : 'v2.jpg';
                 echo '            <img src="../uploads/' . $image . '" alt="' . htmlspecialchars($event['title']) . '">';
                 echo '        </div>';
                 echo '        <div class="content">';
