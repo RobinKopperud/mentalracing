@@ -1,14 +1,29 @@
-<?php
 // Include the database connection file
 include_once '../../db.php'; // Adjust the path as needed
 
+// Fetch the unique years from the timeline_events table
+$years_sql = "SELECT DISTINCT YEAR(event_date) as year FROM timeline_events ORDER BY year ASC";
+$years_result = $conn->query($years_sql);
+
+$years = [];
+if ($years_result->num_rows > 0) {
+    while ($row = $years_result->fetch_assoc()) {
+        $years[] = $row['year'];
+    }
+}
+
 // Fetch the timeline events from the database
-$sql = "SELECT * FROM timeline_events ORDER BY event_date ASC";
+$year_filter = isset($_GET['year']) ? (int)$_GET['year'] : null;
+$sql = "SELECT * FROM timeline_events";
+if ($year_filter) {
+    $sql .= " WHERE YEAR(event_date) = $year_filter";
+}
+$sql .= " ORDER BY event_date ASC";
 $result = $conn->query($sql);
 
 $events = [];
 if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
+    while ($row = $result->fetch_assoc()) {
         $events[] = $row;
     }
 }
@@ -32,7 +47,19 @@ if ($result->num_rows > 0) {
     </header>
 
     <section class="container">
-        <h2>Tidslinje</h2>
+        <h2>Historie</h2>
+        <form method="GET" action="">
+            <label for="year">Filter by year:</label>
+            <select id="year" name="year">
+                <option value="">All</option>
+                <?php foreach ($years as $year): ?>
+                    <option value="<?php echo $year; ?>" <?php echo ($year_filter == $year) ? 'selected' : ''; ?>>
+                        <?php echo $year; ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+            <button type="submit">Filter</button>
+        </form>
         <div class="timeline">
             <?php
             $side = 'left';

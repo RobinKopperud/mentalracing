@@ -10,8 +10,7 @@
 <body>
     <header>
         <div class="container">
-            <a href="index.php"> <h1>Mental Racing Team</h1>
-            </a>
+            <a href="index.php"> <h1>Mental Racing Team</h1></a>
         </div>
     </header>
 
@@ -19,7 +18,7 @@
 
     <nav>
         <a href="#resultater">Resultater</a>
-        <a href="ref/timeline.php">Tidslinje</a>
+        <a href="ref/timeline.php">Historie</a>
         <a href="ref/galleri.php">Galleri</a>
         <a href="#contact">Kontakt</a>
         <a href="admin/admin.php">Administrator</a>
@@ -48,6 +47,14 @@
         <p>til neste race!</p>
     </section>
 
+    <section id="news" class="content-section">
+        <h2>Nyheter</h2>
+            <div class="news-container">
+                <?php include 'news.php'; ?>
+            </div>
+    </section>
+
+
     <section id="about" class="content-section">
         <h2>Om Mental Racing Team</h2>
         <p>Mental Racing Team ble grunnlagt av en ung racerfører som gjennomgikk en hjertetransplantasjon i en alder av 16 år. Denne livsendrende erfaringen har formet vår misjon om å bruke racing som en plattform for å rette oppmerksomhet mot menns mentale helse.</p>
@@ -59,13 +66,15 @@
     </section>
 
     <section id="contact" class="content-section">
-        <h2>Kontakt Oss</h2>
-        <p>Interessert i å sponse eller støtte vårt oppdrag? Ta kontakt med oss på Instagram eller send oss en e-post.</p>
-        <p>Instagram: @Mental.racing22</p>
-        <p>E-post: kontakt@mentalracingteam.no</p>
-    </section>
-
-    <footer class="content-section">
+    <h2>Kontakt Oss</h2>
+    <p>Interessert i å sponse eller støtte vårt oppdrag? Ta kontakt med oss på Instagram eller send oss en e-post.</p>
+    <p>Instagram: @Mental.racing22</p>
+    <p>E-post: mental@mentalracing.no</p>
+    <p>
+        <button id="contactButton">Send oss en melding</button>
+    </p>
+</section>
+    <footer>
         <div class="social-links">
             <a href="https://www.instagram.com/Mental.racing22" target="_blank">Instagram</a>
             <a href="https://www.tiktok.com/@mentalracingteam" target="_blank">TikTok</a>
@@ -75,5 +84,6 @@
 
     <script src="script.js"></script>
     <script src="nextrace.js"></script>
+    <script src="scripts/mail.js"></script>
 </body>
 </html>
