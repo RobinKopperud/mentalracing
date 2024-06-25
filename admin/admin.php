@@ -50,6 +50,10 @@ if ($conn->connect_error) {
                     <h2>Last opp tidslinjehendelse</h2>
                     <?php include('timelineadmin.php'); ?>
                 </div>
+                <div class="admin-section">
+                    <h2>Last opp nyheter</h2>
+                    <?php include('admin_news.php'); ?>
+                </div>
             </div>
         <?php endif; ?>
     </div>

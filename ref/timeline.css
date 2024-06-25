@@ -149,3 +149,37 @@ header a {
         display: none;
     }
 }
+
+form {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+form label {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+form select {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #e8491d;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #d13817;
+}
+

@@ -85,5 +85,7 @@
     <script src="script.js"></script>
     <script src="nextrace.js"></script>
     <script src="scripts/mail.js"></script>
+    <script src="scripts/news.js"></script>
+
 </body>
 </html>
