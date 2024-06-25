@@ -48,12 +48,7 @@
         <p>til neste race!</p>
     </section>
 
-    <section id="news" class="content-section">
-        <h2>Nyheter</h2>
-        <div class="news-container">
-            <?php include 'phpfront/news.php'; ?>
-        </div>
-    </section>
+    
 
     <section id="about" class="content-section">
         <h2>Om Mental Racing Team</h2>
