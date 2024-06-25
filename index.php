@@ -51,7 +51,7 @@
     <section id="news" class="content-section">
         <h2>Nyheter</h2>
             <div class="news-container">
-                <?php include 'news.php'; ?>
+                <?php include 'phpfront/news.php'; ?>
             </div>
     </section>
 
