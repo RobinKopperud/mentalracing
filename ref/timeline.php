@@ -20,9 +20,7 @@ if ($result->num_rows > 0) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tidslinje - Mental Racing Team</title>
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../mobile.css" media="screen and (max-width: 768px)">
-    <link rel="stylesheet" href="timeline.css">
+    <link rel="stylesheet" href="timeline.css?v=1.4">
 </head>
 <body>
     <header>
@@ -40,15 +38,17 @@ if ($result->num_rows > 0) {
             $side = 'left';
             foreach ($events as $event) {
                 echo '<div class="timeline-event ' . $side . '">';
-                echo '    <div class="image-container">';
+                echo '    <div class="timeline-content">';
+                echo '        <div class="image-container">';
                 $image = !empty($event['image']) ? htmlspecialchars($event['image']) : 'v3.jpg';
-                echo '        <img src="../uploads/' . $image . '" alt="' . htmlspecialchars($event['title']) . '">';
+                echo '            <img src="../uploads/' . $image . '" alt="' . htmlspecialchars($event['title']) . '">';
+                echo '        </div>';
+                echo '        <div class="content">';
+                echo '            <h2>' . htmlspecialchars($event['title']) . '</h2>';
+                echo '            <p>' . htmlspecialchars($event['comment']) . '</p>';
+                echo '            <div class="date">' . htmlspecialchars($event['event_date']) . '</div>';
+                echo '        </div>';
                 echo '    </div>';
-                echo '    <div class="content">';
-                echo '        <h2>' . htmlspecialchars($event['title']) . '</h2>';
-                echo '        <p>' . htmlspecialchars($event['comment']) . '</p>';
-                echo '    </div>';
-                echo '    <div class="date">' . htmlspecialchars($event['event_date']) . '</div>';
                 echo '</div>';
                 $side = ($side === 'left') ? 'right' : 'left';
             }
