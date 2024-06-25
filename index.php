@@ -1,3 +1,9 @@
+<?php
+// Enable error reporting for debugging
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
 <!DOCTYPE html>
 <html lang="no">
 <head>
@@ -11,7 +17,7 @@
 <body>
     <header>
         <div class="container">
-            <a href="index.php"> <h1>Mental Racing Team</h1></a>
+            <a href="index.php"><h1>Mental Racing Team</h1></a>
         </div>
     </header>
 
