@@ -57,7 +57,7 @@ error_reporting(E_ALL);
     <section id="news" class="content-section">
         <h2>Nyheter</h2>
         <div class="news-container">
-            <?php include 'phpfront/news.php'; ?>
+            <?php include 'news.php'; ?>
         </div>
     </section>
 
