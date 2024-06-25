@@ -37,3 +37,45 @@
 .news-item p {
     color: #cccccc; /* Light gray text for readability */
 }
+
+/* Media Queries for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .news-item {
+        width: 100%; /* Make news items full width on smaller screens */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .news-item img {
+        height: 150px; /* Reduce height of images */
+    }
+
+    .news-item h3 {
+        font-size: 1.2em; /* Slightly smaller title font size */
+    }
+
+    .news-item p {
+        font-size: 0.9em; /* Smaller paragraph font size */
+    }
+
+    .news-item p:last-child {
+        display: none; /* Hide the last paragraph if necessary to save space */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .news-item {
+        padding: 10px; /* Further reduce padding */
+    }
+
+    .news-item img {
+        height: 100px; /* Further reduce height of images */
+    }
+
+    .news-item h3 {
+        font-size: 1em; /* Further reduce title font size */
+    }
+
+    .news-item p {
+        font-size: 0.8em; /* Further reduce paragraph font size */
+    }
+}

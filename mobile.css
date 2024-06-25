@@ -1,5 +1,6 @@
 body {
     font-size: 16px; /* Increase base font size for better readability on small screens */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .container {
@@ -41,8 +42,9 @@ nav a {
 }
 
 .content-section {
-    padding: 20px 2em; /* Adjust padding for mobile */
+    padding: 20px 10px; /* Adjust padding for mobile */
     margin-bottom: 20px; /* Add some margin below each section */
+    overflow: hidden; /* Contain floated elements */
 }
 
 #countdown-section .countdown {

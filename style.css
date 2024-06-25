@@ -5,6 +5,7 @@ body {
     background-color: #1a1a1a;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .container {
@@ -22,12 +23,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center; /* Center the text */
 }
 
 header h1 {
     margin: 0;
     color: #ffffff;
-    text-align: center;
     background-color: rgba(0, 0, 0, 0.5); /* Add background to make text readable */
     padding: 10px 20px;
     border-radius: 5px;
@@ -64,6 +65,16 @@ nav a:hover {
     background-color: #2c2c2c;
     border-bottom: 1px solid #e8491d;
     margin-bottom: 20px; /* Add some margin below each section */
+    overflow: hidden; /* Contain floated elements */
+    border-radius: 5px; /* Add some rounding to section borders */
+}
+
+.content-section p {
+    color: #cccccc; /* Light gray text for readability */
+    padding: 0 350px; /* Add padding to avoid text touching the edges */
+    margin: 0 auto; /* Center the text */
+    max-width: 100%; /* Ensure text does not exceed the container width */
+    box-sizing: border-box; /* Include padding in element's total width */
 }
 
 .countdown {
@@ -156,18 +167,6 @@ h2 {
     border-bottom: 2px solid #ffffff; /* White underline for section headings */
     display: inline-block;
     padding-bottom: 5px;
-}
-
-.content-section p {
-    color: #cccccc; /* Light gray text for readability */
-    padding: 0 400px;
-}
-
-.content-section {
-    border: 1px solid #e8491d;
-    border-radius: 5px;
-    padding: 20px;
-    margin-bottom: 20px;
 }
 
 .content-section:nth-child(even) {
