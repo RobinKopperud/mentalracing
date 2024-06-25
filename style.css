@@ -41,20 +41,20 @@ header a {
 nav {
     display: flex;
     justify-content: center;
-    background-color: #ffffff;
-    border-bottom: 1px solid #ddd;
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #e8491d;
     padding: 10px 0;
 }
 
 nav a {
-    color: #333;
+    color: #ffffff;
     text-decoration: none;
     padding: 10px 15px;
     transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #f4f4f4;
+    background-color: #e8491d;
 }
 
 .content-section {
@@ -88,26 +88,28 @@ nav a:hover {
     display: block;
     font-size: 2em;
     font-weight: bold;
+    color: #e8491d; /* Add red color to countdown numbers */
 }
 
 .smalltext {
     padding-top: 5px;
     font-size: 12px;
+    color: #333;
 }
 
 footer {
-    background: #ffffff;
-    color: #333;
+    background: #1a1a1a;
+    color: #ffffff;
     text-align: center;
     padding: 20px 0;
     position: relative;
     bottom: 0;
     width: 100%;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #e8491d;
 }
 
 .social-links a {
-    color: #333;
+    color: #ffffff;
     margin: 0 10px;
     font-size: 24px;
     transition: color 0.3s ease;
@@ -144,4 +146,27 @@ footer {
     display: block;
     margin: 0 auto;
     max-height: 400px; /* Adjust as necessary */
+}
+
+/* Additional styling for red and black touches */
+h2 {
+    color: #e8491d; /* Red color for section headings */
+    border-bottom: 2px solid #1a1a1a; /* Black underline for section headings */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.content-section p {
+    color: #333; /* Ensuring text color is readable */
+}
+
+.content-section {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.content-section:nth-child(even) {
+    background-color: #f9f9f9; /* Slightly different background for alternate sections */
 }
