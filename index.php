@@ -50,11 +50,10 @@
 
     <section id="news" class="content-section">
         <h2>Nyheter</h2>
-            <div class="news-container">
-                <?php include 'phpfront/news.php'; ?>
-            </div>
+        <div class="news-container">
+            <?php include 'phpfront/news.php'; ?>
+        </div>
     </section>
-
 
     <section id="about" class="content-section">
         <h2>Om Mental Racing Team</h2>
@@ -67,14 +66,15 @@
     </section>
 
     <section id="contact" class="content-section">
-    <h2>Kontakt Oss</h2>
-    <p>Interessert i å sponse eller støtte vårt oppdrag? Ta kontakt med oss på Instagram eller send oss en e-post.</p>
-    <p>Instagram: @Mental.racing22</p>
-    <p>E-post: mental@mentalracing.no</p>
-    <p>
-        <button id="contactButton">Send oss en melding</button>
-    </p>
-</section>
+        <h2>Kontakt Oss</h2>
+        <p>Interessert i å sponse eller støtte vårt oppdrag? Ta kontakt med oss på Instagram eller send oss en e-post.</p>
+        <p>Instagram: @Mental.racing22</p>
+        <p>E-post: mental@mentalracing.no</p>
+        <p>
+            <button id="contactButton">Send oss en melding</button>
+        </p>
+    </section>
+    
     <footer>
         <div class="social-links">
             <a href="https://www.instagram.com/Mental.racing22" target="_blank">Instagram</a>
@@ -87,6 +87,5 @@
     <script src="nextrace.js"></script>
     <script src="scripts/mail.js"></script>
     <script src="scripts/news.js"></script>
-
 </body>
 </html>
