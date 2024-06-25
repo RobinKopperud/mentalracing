@@ -44,6 +44,7 @@ nav {
     background-color: #1a1a1a;
     border-bottom: 1px solid #e8491d;
     padding: 10px 0;
+    position: sticky;
 }
 
 nav a {
@@ -60,7 +61,7 @@ nav a:hover {
 .content-section {
     padding: 50px 30px;
     text-align: center;
-    background-color: #ffffff;
+    background-color: blanchedalmond;
     border-bottom: 1px solid #ddd;
     margin-bottom: 20px; /* Add some margin below each section */
 }
