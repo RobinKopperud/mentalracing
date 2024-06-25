@@ -1,6 +1,6 @@
 <?php
 // Database connection
-include_once '../../../db.php'; // Adjust the path as needed
+include_once '../../db.php'; // Adjust the path as needed
 
 // Fetch the latest news
 $sql = "SELECT title, content, driver, location, date, image FROM news ORDER BY date DESC";
