@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once '../../../db.php'; // Adjust the path as needed
+include_once '../../db.php'; // Adjust the path as needed
 
 // Simple authentication (replace with a more secure method in production)
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['password'])) {

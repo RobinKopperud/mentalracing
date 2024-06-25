@@ -56,7 +56,7 @@ nav a:hover {
     opacity: 1; /* Ensure sections are visible */
     transform: translateY(0); /* Remove transform */
     transition: opacity 0.5s ease, transform 0.5s ease;
-    border-bottom: 1px solid #555; /* Add border to separate sections */
+    border-bottom: 5px solid #555; /* Add border to separate sections */
     margin-bottom: 20px; /* Add some margin below each section */
 }
 
