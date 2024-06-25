@@ -158,6 +158,7 @@ h2 {
 
 .content-section p {
     color: #333; /* Ensuring text color is readable */
+    padding: 0 400px;
 }
 
 .content-section {
