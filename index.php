@@ -10,8 +10,12 @@
 <body>
     <header>
         <div class="container">
-        <a href="index.php"> <h1>Mental Racing Team</h1></a>
+            <a href="index.php"> <h1>Mental Racing Team</h1>
+            </a>
+            <img src="images/v2.jpg" alt="Forsidebilde" class="forsidebilde">
+
         </div>
+        
     </header>
 
     <button class="menu-toggle" aria-label="Toggle menu">☰</button>
@@ -25,27 +29,27 @@
     </nav>
 
     <section id="countdown-section" class="content-section">
-        <h2>Nedtelling til neste race</h2>
-        <div id="countdown" class="countdown">
-            <div>
-                <span id="days"></span>
-                <div class="smalltext">Dager</div>
-            </div>
-            <div>
-                <span id="hours"></span>
-                <div class="smalltext">Timer</div>
-            </div>
-            <div>
-                <span id="minutes"></span>
-                <div class="smalltext">Minutter</div>
-            </div>
-            <div>
-                <span id="seconds"></span>
-                <div class="smalltext">Sekunder</div>
-            </div>
+    <h2>Nedtelling til neste race</h2>
+    <div id="countdown" class="countdown">
+        <div class="countdown-item">
+            <span id="days"></span>
+            <div class="smalltext">Dager</div>
         </div>
-        <p>til neste race!</p>
-    </section>
+        <div class="countdown-item">
+            <span id="hours"></span>
+            <div class="smalltext">Timer</div>
+        </div>
+        <div class="countdown-item">
+            <span id="minutes"></span>
+            <div class="smalltext">Minutter</div>
+        </div>
+        <div class="countdown-item">
+            <span id="seconds"></span>
+            <div class="smalltext">Sekunder</div>
+        </div>
+    </div>
+    <p>til neste race!</p>
+</section>
 
     <section id="about" class="content-section">
         <h2>Om Mental Racing Team</h2>

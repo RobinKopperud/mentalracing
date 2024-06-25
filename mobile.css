@@ -14,7 +14,7 @@ header h1 {
 .menu-toggle {
     display: block; /* Show the menu toggle button */
     background-color: #333;
-    color: #ffffff;
+    color: #fff;
     border: none;
     font-size: 24px;
     padding: 10px 15px;
@@ -57,7 +57,7 @@ nav a {
     padding: 10px;
     background: #333;
     margin: 5px;
-    border: 1px solid #555; /* Add border around each countdown item */
+    border: 1px solid #555;
     border-radius: 3px;
     text-align: center;
     flex: 1 1 45%; /* Allow items to take up almost half of the screen width on mobile */
