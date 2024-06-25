@@ -5,7 +5,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // Include the database connection file
-include_once '../../../db.php'; // Adjust the path as needed
+include_once '../db.php'; // Adjust the path as needed
 
 // Fetch the latest news
 $sql = "SELECT title, content, driver, location, date, image FROM news ORDER BY date DESC";
