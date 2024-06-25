@@ -1,6 +1,6 @@
 <?php
 // Include the database connection file
-include_once '../../../db.php'; // Adjust the path as needed
+include_once '../../db.php'; // Adjust the path as needed
 
 // Fetch the timeline events from the database
 $sql = "SELECT * FROM timeline_events ORDER BY event_date ASC";
