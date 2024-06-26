@@ -2,19 +2,21 @@
 #news {
     background-color: #f0f0f0; /* Light gray background */
     padding: 50px 0;
+    overflow: hidden; /* Hide scrollbars */
 }
 
 #news h2 {
     font-size: 2em;
     margin-bottom: 20px;
     color: #333; /* Dark gray text */
+    text-align: center;
 }
 
 .news-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0;
 }
 
 .news-item {
@@ -22,7 +24,9 @@
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 300px;
+    width: calc(33.33% - 20px); /* Adjust width to show 3 items at a time */
+    margin-right: 20px;
+    flex: 0 0 auto; /* Prevent shrinking */
     border-left: 4px solid #f00; /* Red accent border */
     overflow: hidden; /* Ensure contents do not overflow */
     display: flex;
@@ -63,4 +67,14 @@
 
 .news-item a:hover {
     text-decoration: underline;
+}
+
+/* Scrollbar styling */
+.news-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.news-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
