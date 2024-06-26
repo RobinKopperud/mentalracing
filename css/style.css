@@ -50,15 +50,18 @@ nav {
     top: 0;
     width: 100%;
     z-index: 1000;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center the content */
+    align-items: center; /* Center items vertically */
 }
 
 nav a {
-    float: left;
-    display: block;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    flex: 1; /* Distribute space evenly */
+    text-transform: uppercase; /* Optional: make text uppercase for a uniform look */
 }
 
 nav a:hover {
