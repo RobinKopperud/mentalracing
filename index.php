@@ -10,10 +10,10 @@ error_reporting(E_ALL);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mental Racing Team</title>
-    <link rel="stylesheet" href="style.css?v=3.0">
-    <link rel="stylesheet" href="countdown.css?v=2.0">
+    <link rel="stylesheet" href="css/style.css?v=3.0">
+    <link rel="stylesheet" href="css/countdown.css?v=2.0">
     <link rel="stylesheet" href="css/news.css?v=2.0">
-    <link rel="stylesheet" href="mobile.css?v=3.0" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="css/mobile.css?v=3.0" media="screen and (max-width: 768px)">
 </head>
 <body>
     <header>
