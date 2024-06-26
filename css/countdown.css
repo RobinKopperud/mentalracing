@@ -1,0 +1,33 @@
+/* Countdown section styles */
+#countdown-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+#countdown-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.countdown-item {
+    background: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.countdown-item span {
+    display: block;
+    font-size: 2em;
+}
+
+.smalltext {
+    font-size: 0.8em;
+}

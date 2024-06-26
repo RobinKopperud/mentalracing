@@ -1,81 +1,25 @@
+/* News section styles */
 #news {
-    overflow-x: auto;
-    white-space: nowrap;
-    padding: 20px 0;
-    background-color: #1a1a1a; /* Background color similar to the design */
-    color: #ffffff; /* White text for readability */
+    background-color: #e0e0e0;
+    padding: 50px 0;
+}
+
+#news h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
 .news-container {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
-.news-item {
-    display: inline-block;
-    background-color: #333333; /* Dark background for news items */
-    border: 1px solid #e8491d; /* Red border */
-    padding: 20px;
-    width: 400px; /* Fixed width for news items */
-    box-sizing: border-box;
-    border-radius: 15px;
-}
-
-.news-item img {
-    width: 100%;
-    height: auto;
+.news-container > div {
+    background: white;
     border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.news-item h3 {
-    color: #e8491d; /* Red color for news titles */
-    margin-top: 0;
-}
-
-.news-item p {
-    color: #cccccc; /* Light gray text for readability */
-}
-
-/* Media Queries for Smaller Screens */
-@media screen and (max-width: 768px) {
-    .news-item {
-        width: 100%; /* Make news items full width on smaller screens */
-        padding: 15px; /* Reduce padding */
-    }
-
-    .news-item img {
-        height: 150px; /* Reduce height of images */
-    }
-
-    .news-item h3 {
-        font-size: 1.2em; /* Slightly smaller title font size */
-    }
-
-    .news-item p {
-        font-size: 0.9em; /* Smaller paragraph font size */
-    }
-
-    .news-item p:last-child {
-        display: none; /* Hide the last paragraph if necessary to save space */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .news-item {
-        padding: 10px; /* Further reduce padding */
-    }
-
-    .news-item img {
-        height: 100px; /* Further reduce height of images */
-    }
-
-    .news-item h3 {
-        font-size: 1em; /* Further reduce title font size */
-    }
-
-    .news-item p {
-        font-size: 0.8em; /* Further reduce paragraph font size */
-    }
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
 }
