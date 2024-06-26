@@ -1,9 +1,3 @@
-<?php
-// Enable error reporting for debugging
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-?>
 <!DOCTYPE html>
 <html lang="no">
 <head>
@@ -91,7 +85,7 @@ error_reporting(E_ALL);
     </footer>
 
     <script src="scripts/script.js"></script>
-    <script src="script/nextrace.js"></script>
+    <script src="scripts/nextrace.js"></script>
     <script src="scripts/mail.js"></script>
     <script src="scripts/news.js"></script>
 </body>

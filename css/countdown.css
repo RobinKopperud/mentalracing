@@ -1,7 +1,8 @@
 /* Countdown section styles */
 #countdown-section {
-    background-color: #f9f9f9;
+    background-color: #000; /* Black background */
     padding: 50px 0;
+    color: white;
 }
 
 #countdown-section h2 {
@@ -16,7 +17,7 @@
 }
 
 .countdown-item {
-    background: #333;
+    background: #333; /* Dark gray background */
     color: white;
     padding: 20px;
     border-radius: 5px;

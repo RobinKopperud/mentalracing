@@ -1,5 +1,26 @@
-/* Mobile styles */
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        background: #333;
+        color: white;
+        border: none;
+        padding: 14px 16px;
+        width: 100%;
+        text-align: left;
+    }
+
+    nav a {
+        float: none;
+        display: none;
+        width: 100%;
+        text-align: left;
+        padding: 14px;
+    }
+
+    nav.show a {
+        display: block;
+    }
+
     header {
         padding: 30px 0;
     }
