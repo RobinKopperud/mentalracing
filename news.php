@@ -19,9 +19,11 @@ if ($result === false) {
             echo '<div class="news-item">';
             echo '<img src="../uploads/' . htmlspecialchars($row['image']) . '" alt="' . htmlspecialchars($row['title']) . '">';
             echo '<h3>' . htmlspecialchars($row['title']) . '</h3>';
+            echo '<div class="metadata">';
             echo '<p>Driver: ' . htmlspecialchars($row['driver']) . '</p>';
             echo '<p>Location: ' . htmlspecialchars($row['location']) . '</p>';
             echo '<p>Date: ' . htmlspecialchars($row['date']) . '</p>';
+            echo '</div>';
             echo '<p>' . htmlspecialchars($row['content']) . '</p>';
             echo '</div>';
         }
