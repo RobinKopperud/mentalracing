@@ -1,110 +1,68 @@
-/* News section styles */
+/* Style for the news section */
 #news {
-    background-color: #e0e0e0; /* Slightly darker gray background */
-    padding: 50px 0;
-    overflow: hidden; /* Hide scrollbars */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
 }
 
-#news h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333; /* Dark gray text */
-    text-align: center;
-}
-
+/* Container for all news items */
 .news-container {
     display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 20px 0;
-    gap: 20px; /* Space between items */
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
+/* Each news item */
 .news-item {
-    background: #f9f9f9; /* Light gray background for items */
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    width: 500px; /* Set width */
-    flex: 0 0 auto; /* Prevent shrinking */
-    border-left: 4px solid #f00; /* Red accent border */
-    border-top: 4px solid #0f0; /* Green border on top */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 0 10px; /* Small margin left and right */
-    max-height: none; /* Remove max height */
-    overflow: visible; /* Ensure all contents are visible */
+    background-color: #fff;
+    border-left: 5px solid red;
+    border-right: 5px solid green;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(33% - 20px); /* Three items per row with 20px gap */
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
 }
 
+.news-item:hover {
+    transform: translateY(-10px);
+}
+
+/* News item image */
 .news-item img {
-    max-width: 100%;
-    height: auto; /* Keep aspect ratio */
-    border-radius: 5px; /* Optional: to match the card's rounded corners */
-    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
+/* Title of the news item */
 .news-item h3 {
     font-size: 1.5em;
-    color: #333; /* Dark gray text */
-    margin: 10px 0;
-    font-family: 'Arial Black', Gadget, sans-serif; /* Sporty font */
-    text-transform: uppercase; /* Make the text uppercase for a sporty look */
+    margin: 15px 10px;
+    color: #333;
 }
 
-.news-item .metadata {
-    font-size: 0.9em;
-    color: #fff; /* White text */
-    background-color: rgba(0, 0, 0, 0.8); /* Dark background with opacity */
+/* Metadata container */
+.metadata {
+    background-color: #eee;
     padding: 10px;
-    border-radius: 5px; /* Rounded corners */
-    width: 100%;
-    text-align: left; /* Left-align text */
-    margin-bottom: 10px;
+    margin: 0 10px 15px;
+    border-radius: 4px;
 }
 
-.news-item .metadata p {
-    margin: 5px 0; /* Add some margin for spacing */
-}
-
-.news-item p {
-    color: #333; /* Dark gray text */
-    line-height: 1.5;
-    text-align: center;
-    width: calc(100% - 20px); /* Ensure full width for text alignment, accounting for padding */
-    background: rgba(255, 255, 255, 0.8); /* Light background with opacity */
-    padding: 5px 10px; /* Padding around text */
-    border-radius: 5px; /* Rounded corners */
-    z-index: 1; /* Ensure it appears above other elements */
-    position: relative; /* For z-index to take effect */
-    margin: 10px 0; /* Margin to create space around the p element */
-}
-
-.news-item .news-meta {
+.metadata p {
+    margin: 5px 0;
     font-size: 0.9em;
-    color: #999; /* Lighter gray text for meta information */
+    color: #666;
 }
 
-.news-item a {
-    color: #f00; /* Red links */
-    text-decoration: none;
-    margin-top: auto; /* Push link to the bottom */
-    font-weight: bold; /* Make the links bold */
-    font-family: 'Arial Black', Gadget, sans-serif; /* Sporty font */
-}
-
-.news-item a:hover {
-    text-decoration: underline;
-    color: #333; /* Dark gray text on hover for contrast */
-}
-
-/* Scrollbar styling */
-.news-container::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for WebKit browsers */
-}
-
-.news-container {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+/* News item content */
+.news-item p {
+    font-size: 1em;
+    margin: 0 10px 15px;
+    color: #444;
+    line-height: 1.6;
 }
