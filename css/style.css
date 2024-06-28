@@ -13,6 +13,18 @@ body {
     padding: 0 15px;
 }
 
+/* Header with background image */
+header {
+    background-image: url('../images/v1.jpg'); /* Add your image path here */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Ensure any child elements stay within the header */
+}
+
 header h1 {
     margin: 0;
     font-size: 3em;

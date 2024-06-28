@@ -25,8 +25,8 @@
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 300px; /* Minimum width */
-    max-width: 300px; /* Maximum width */
+    width: 350px; /* Minimum width */
+    max-width: 350px; /* Set max width to the same value */
     flex: 0 0 auto; /* Prevent shrinking */
     border-left: 4px solid #f00; /* Red accent border */
     display: flex;
@@ -48,18 +48,21 @@
     font-size: 1.5em;
     color: #333; /* Dark gray text */
     margin: 10px 0;
+    font-family: 'Arial Black', Gadget, sans-serif; /* Sporty font */
+    text-transform: uppercase; /* Make the text uppercase for a sporty look */
 }
 
 .news-item p {
     color: #333; /* Dark gray text */
     line-height: 1.25;
     text-align: center;
-    width: 100%; /* Ensure full width for text alignment */
+    width: calc(100% - 20px); /* Ensure full width for text alignment, accounting for padding */
     background: rgba(255, 255, 255, 0.8); /* Light background with opacity */
-    padding: 5px; /* Padding around text */
+    padding: 5px 10px; /* Padding around text */
     border-radius: 5px; /* Rounded corners */
     z-index: 1; /* Ensure it appears above other elements */
     position: relative; /* For z-index to take effect */
+    margin: 10px 0; /* Margin to create space around the p element */
 }
 
 .news-item .news-meta {
@@ -71,10 +74,13 @@
     color: #f00; /* Red links */
     text-decoration: none;
     margin-top: auto; /* Push link to the bottom */
+    font-weight: bold; /* Make the links bold */
+    font-family: 'Arial Black', Gadget, sans-serif; /* Sporty font */
 }
 
 .news-item a:hover {
     text-decoration: underline;
+    color: #333; /* Dark gray text on hover for contrast */
 }
 
 /* Scrollbar styling */
