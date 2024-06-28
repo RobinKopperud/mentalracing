@@ -9,7 +9,7 @@
 .news-container {
     display: flex;
     overflow-x: auto;
-    max-height: 400px;
+    max-height: 500px; /* Increased height to 500px */
     white-space: nowrap;
     gap: 20px;
     padding-bottom: 10px; /* Added padding to avoid scrollbar overlap */
