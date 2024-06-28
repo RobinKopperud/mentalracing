@@ -8,8 +8,11 @@
 /* Container for all news items */
 .news-container {
     display: flex;
-    flex-wrap: wrap;
+    overflow-x: auto;
+    max-height: 400px;
+    white-space: nowrap;
     gap: 20px;
+    padding-bottom: 10px; /* Added padding to avoid scrollbar overlap */
 }
 
 /* Each news item */
@@ -22,9 +25,11 @@
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: calc(33% - 20px); /* Three items per row with 20px gap */
+    width: 300px; /* Fixed width for each item */
     box-sizing: border-box;
     transition: transform 0.3s ease;
+    display: inline-block; /* Ensure items stay on a single row */
+    margin-right: 20px; /* Add gap between items */
 }
 
 .news-item:hover {
