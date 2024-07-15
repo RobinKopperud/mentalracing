@@ -70,7 +70,7 @@
         <h2>Kontakt Oss</h2>
         <p>Interessert i å sponse eller støtte vårt oppdrag? Ta kontakt med oss på Instagram eller send oss en e-post.</p>
         <p>Instagram: @Mental.racing22</p>
-        <p>E-post: mental@mentalracing.no</p>
+        <p>E-post: contact@mentalracing.no</p>
         <p>
             <button id="contactButton">Send oss en melding</button>
         </p>
@@ -88,5 +88,6 @@
     <script src="scripts/nextrace.js"></script>
     <script src="scripts/mail.js"></script>
     <script src="scripts/news.js"></script>
+    <script src="scripts/news2.js"></script>
 </body>
 </html>

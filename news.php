@@ -17,14 +17,16 @@ if ($result === false) {
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             echo '<div class="news-item">';
-            echo '<img src="../uploads/' . htmlspecialchars($row['image']) . '" alt="' . htmlspecialchars($row['title']) . '">';
+            echo '<div class="news-image" style="background-image: url(../uploads/' . htmlspecialchars($row['image']) . ');"></div>';
+            echo '<div class="news-content">';
             echo '<h3>' . htmlspecialchars($row['title']) . '</h3>';
             echo '<div class="metadata">';
-            echo '<p>Driver: ' . htmlspecialchars($row['driver']) . '</p>';
-            echo '<p>Location: ' . htmlspecialchars($row['location']) . '</p>';
-            echo '<p>Date: ' . htmlspecialchars($row['date']) . '</p>';
+            echo '<p><strong>Driver:</strong> ' . htmlspecialchars($row['driver']) . '</p>';
+            echo '<p><strong>Location:</strong> ' . htmlspecialchars($row['location']) . '</p>';
+            echo '<p><strong>Date:</strong> ' . htmlspecialchars($row['date']) . '</p>';
             echo '</div>';
             echo '<p>' . htmlspecialchars($row['content']) . '</p>';
+            echo '</div>';
             echo '</div>';
         }
     } else {
