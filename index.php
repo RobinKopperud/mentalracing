@@ -22,7 +22,7 @@
         <a href="#resultater">Resultater</a>
         <a href="ref/timeline.php">Historie</a>
         <a href="ref/galleri.php">Galleri</a>
-        <a href="#contact">Kontakt</a>
+        <a href="#contact">Kontakt/Sponsor</a>
         <a href="admin/admin.php">Administrator</a>
     </nav>
 
