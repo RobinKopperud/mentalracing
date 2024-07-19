@@ -1,11 +1,9 @@
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('Mental Racing Team website loaded');
-
-    // Toggle menu visibility on mobile devices
+document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
-    
-    menuToggle.addEventListener('click', function() {
-        nav.classList.toggle('show');
+
+    menuToggle.addEventListener('click', function () {
+        menuToggle.classList.toggle('active');
+        nav.classList.toggle('active');
     });
 });
