@@ -132,3 +132,7 @@ footer .social-links a:hover {
 footer p {
     margin: 10px 0 0; /* Margin adjustment */
 }
+
+.menu-toggle {
+    display: none
+}
