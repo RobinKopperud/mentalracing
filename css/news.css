@@ -16,6 +16,8 @@
     transition: transform 0.2s, box-shadow 0.2s;
     background-color: #1c1c1c;
     color: #f2f2f2;
+    height: auto;
+    padding: 30px 5px;
 }
 
 .news-item:hover {
