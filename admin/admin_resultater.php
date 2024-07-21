@@ -8,12 +8,7 @@ if (!isset($_SESSION['authenticated'])) {
     exit();
 }
 
-// Initialize variables
-$date = $race = $position = $time = $bike = $image = "";
-$success = $error = "";
-
-// Handle form submission
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['date']) && $_SESSION['authenticated']) {
     $date = $_POST['date'];
     $race = $_POST['race'];
     $position = $_POST['position'];
@@ -33,6 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $sql = "INSERT INTO results (date, race, position, time, bike, image) VALUES ('$date', '$race', '$position', '$time', '$bike', " . ($image ? "'$image'" : "NULL") . ")";
         if ($conn->query($sql) === TRUE) {
             $success = 'Resultat vellykket lastet opp!';
+            // Clear the form fields after successful submission
+            $date = $race = $position = $time = $bike = $image = "";
         } else {
             $error = 'Database error: ' . $conn->error;
         }
