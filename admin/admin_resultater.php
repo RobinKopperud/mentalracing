@@ -1,16 +1,5 @@
 <?php
-session_start();
 include_once '../../db.php'; // Adjust the path as needed
-
-// Ensure user is authenticated
-if (!isset($_SESSION['authenticated'])) {
-    header('Location: ../index.php');
-    exit();
-}
-
-// Initialize variables
-$date = $race = $position = $time = $bike = $image = "";
-$success = $error = "";
 
 // Handle form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
