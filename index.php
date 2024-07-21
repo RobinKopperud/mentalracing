@@ -19,7 +19,7 @@
     <button class="menu-toggle" aria-label="Toggle menu">☰</button>
 
     <nav>
-        <a href="#resultater">Resultater</a>
+        <a href="ref/resultater.php">Resultater</a>
         <a href="ref/timeline.php">Historie</a>
         <a href="ref/galleri.php">Galleri</a>
         <a href="#contact">Kontakt/Sponsor</a>

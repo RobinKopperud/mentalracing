@@ -54,6 +54,10 @@ if ($conn->connect_error) {
                     <h2>Last opp nyheter</h2>
                     <?php include('admin_news.php'); ?>
                 </div>
+                <div class="admin-section">
+                    <h2>Last opp resultater</h2>
+                    <?php include('admin_resultater.php'); ?>
+                </div>
             </div>
         <?php endif; ?>
     </div>
