@@ -126,7 +126,7 @@ if ($driver_filter) {
             <?php foreach ($results as $result): ?>
                 <div class="result-item">
                     <div class="result-image">
-                        <?php $image = !empty($result['image']) ? htmlspecialchars($result['image']) : 'default.jpg'; ?>
+                        <?php $image = !empty($result['image']) ? htmlspecialchars($result['image']) : 'v3.jpg'; ?>
                         <img src="../uploads/<?php echo $image; ?>" alt="<?php echo htmlspecialchars($result['race']); ?>">
                     </div>
                     <div class="result-content">
