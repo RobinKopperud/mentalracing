@@ -14,12 +14,12 @@ nav.open {
 /* Navigation links styling */
 nav a {
     display: block;
-    text-align: left;
+    text-align: center;
     padding: 10px 20px;
     background: #222;
     color: #fff;
     text-decoration: none;
-    border-bottom: 1px solid #444;
+    border-bottom: 3px solid #444;
 }
 
 /* Display the toggle button */

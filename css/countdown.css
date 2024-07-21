@@ -3,6 +3,7 @@
     background-color: #000; /* Black background */
     padding: 50px 0;
     color: white;
+    text-align: center;
 }
 
 #countdown-section h2 {
@@ -31,4 +32,24 @@
 
 .smalltext {
     font-size: 0.8em;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .countdown {
+        flex-wrap: wrap;
+    }
+
+    .countdown-item {
+        flex: 1 1 100%;
+        margin-bottom: 10px;
+    }
+
+    .countdown-item span {
+        font-size: 1.5em;
+    }
+
+    .smalltext {
+        font-size: 0.7em;
+    }
 }
