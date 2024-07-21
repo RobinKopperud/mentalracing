@@ -23,15 +23,6 @@ $results = $stmt->fetchAll();
         </div>
     </header>
 
-    <nav>
-        <a href="index.php">Hjem</a>
-        <a href="resultater.php">Resultater</a>
-        <a href="ref/timeline.php">Historie</a>
-        <a href="ref/galleri.php">Galleri</a>
-        <a href="#contact">Kontakt/Sponsor</a>
-        <a href="admin/admin.php">Administrator</a>
-    </nav>
-
     <section id="results" class="content-section">
         <h2>Resultater</h2>
         <table class="results-table">
