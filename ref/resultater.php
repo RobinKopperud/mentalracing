@@ -13,11 +13,31 @@ if ($years_result->num_rows > 0) {
     }
 }
 
+// Fetch the unique drivers from the results table
+$drivers_sql = "SELECT DISTINCT driver FROM results ORDER BY driver ASC";
+$drivers_result = $conn->query($drivers_sql);
+
+$drivers = [];
+if ($drivers_result->num_rows > 0) {
+    while ($row = $drivers_result->fetch_assoc()) {
+        $drivers[] = $row['driver'];
+    }
+}
+
 // Fetch the results from the database
 $year_filter = isset($_GET['year']) ? (int)$_GET['year'] : null;
+$driver_filter = isset($_GET['driver']) ? $_GET['driver'] : null;
 $sql = "SELECT * FROM results";
-if ($year_filter) {
-    $sql .= " WHERE YEAR(date) = $year_filter";
+if ($year_filter || $driver_filter) {
+    $sql .= " WHERE";
+    $conditions = [];
+    if ($year_filter) {
+        $conditions[] = " YEAR(date) = $year_filter";
+    }
+    if ($driver_filter) {
+        $conditions[] = " driver = '$driver_filter'";
+    }
+    $sql .= implode(" AND", $conditions);
 }
 $sql .= " ORDER BY date ASC";
 $result = $conn->query($sql);
@@ -28,6 +48,25 @@ if ($result->num_rows > 0) {
         $results[] = $row;
     }
 }
+
+// Calculate the number of first, second, and third places for the selected driver
+$first_place = $second_place = $third_place = 0;
+if ($driver_filter) {
+    $place_sql = "SELECT position, COUNT(*) as count FROM results WHERE driver = '$driver_filter' GROUP BY position";
+    $place_result = $conn->query($place_sql);
+
+    if ($place_result->num_rows > 0) {
+        while ($row = $place_result->fetch_assoc()) {
+            if ($row['position'] == 1) {
+                $first_place = $row['count'];
+            } elseif ($row['position'] == 2) {
+                $second_place = $row['count'];
+            } elseif ($row['position'] == 3) {
+                $third_place = $row['count'];
+            }
+        }
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -36,9 +75,9 @@ if ($result->num_rows > 0) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultater - Mental Racing Team</title>
-    <link rel="stylesheet" href="../css/style.css?v=1.5">
-    <link rel="stylesheet" href="../css/resultater.css?v=1.5">
-    <link rel="stylesheet" href="../css/mobile.css?v=1.5" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="style.css?v=1.5">
+    <link rel="stylesheet" href="resultater.css?v=1.5">
+    <link rel="stylesheet" href="mobile.css?v=1.5" media="screen and (max-width: 768px)">
 </head>
 <body>
     <header>
@@ -61,8 +100,28 @@ if ($result->num_rows > 0) {
                     </option>
                 <?php endforeach; ?>
             </select>
+
+            <label for="driver">Filter by driver:</label>
+            <select id="driver" name="driver">
+                <option value="">All</option>
+                <?php foreach ($drivers as $driver): ?>
+                    <option value="<?php echo htmlspecialchars($driver); ?>" <?php echo ($driver_filter == $driver) ? 'selected' : ''; ?>>
+                        <?php echo htmlspecialchars($driver); ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
             <button type="submit">Filter</button>
         </form>
+
+        <?php if ($driver_filter): ?>
+            <div class="driver-summary">
+                <h3>Driver Summary for <?php echo htmlspecialchars($driver_filter); ?>:</h3>
+                <p>First Places: <?php echo $first_place; ?></p>
+                <p>Second Places: <?php echo $second_place; ?></p>
+                <p>Third Places: <?php echo $third_place; ?></p>
+            </div>
+        <?php endif; ?>
+
         <div class="results">
             <?php foreach ($results as $result): ?>
                 <div class="result-item">
@@ -76,6 +135,7 @@ if ($result->num_rows > 0) {
                         <p>Posisjon: <?php echo htmlspecialchars($result['position']); ?></p>
                         <p>Tid: <?php echo htmlspecialchars($result['time']); ?></p>
                         <p>Sykkel: <?php echo htmlspecialchars($result['bike']); ?></p>
+                        <p>Fører: <?php echo htmlspecialchars($result['driver']); ?></p>
                     </div>
                 </div>
             <?php endforeach; ?>

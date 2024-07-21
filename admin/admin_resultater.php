@@ -14,6 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['race']) && $_SESSION[
     $position = $_POST['position'];
     $time = $_POST['time'];
     $bike = $_POST['bike'];
+    $driver = $_POST['driver'];
     $image = $_FILES['image']['name'];
 
     // Set a default value for image
@@ -25,9 +26,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['race']) && $_SESSION[
     // Attempt to move the uploaded image if one was provided
     if (empty($image) || move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
         $image = empty($image) ? null : basename($image); // Use null if no image was uploaded
-        $sql = "INSERT INTO results (date, race, position, time, bike, image) VALUES ('$date', '$race', '$position', '$time', '$bike', " . ($image ? "'$image'" : "NULL") . ")";
+        $sql = "INSERT INTO results (date, race, position, time, bike, driver, image) VALUES ('$date', '$race', '$position', '$time', '$bike', '$driver', " . ($image ? "'$image'" : "NULL") . ")";
         if ($conn->query($sql) === TRUE) {
             $success = 'Resultat vellykket lastet opp!';
+            // Clear the form fields after successful submission
+            $date = $race = $position = $time = $bike = $driver = $image = "";
         } else {
             $error = 'Database error: ' . $conn->error;
         }
@@ -39,19 +42,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['race']) && $_SESSION[
 
 <form class="admin-form" method="POST" enctype="multipart/form-data">
     <label for="date">Dato:</label>
-    <input type="date" id="date" name="date" required>
+    <input type="date" id="date" name="date" required value="<?php echo htmlspecialchars($date); ?>">
 
     <label for="race">Race:</label>
-    <input type="text" id="race" name="race" required>
+    <input type="text" id="race" name="race" required value="<?php echo htmlspecialchars($race); ?>">
 
     <label for="position">Posisjon:</label>
-    <input type="number" id="position" name="position" required>
+    <input type="number" id="position" name="position" required value="<?php echo htmlspecialchars($position); ?>">
 
     <label for="time">Tid:</label>
-    <input type="text" id="time" name="time" placeholder="HH:MM:SS" required>
+    <input type="text" id="time" name="time" placeholder="HH:MM:SS" required value="<?php echo htmlspecialchars($time); ?>">
 
     <label for="bike">Sykkel:</label>
-    <input type="text" id="bike" name="bike" required>
+    <input type="text" id="bike" name="bike" required value="<?php echo htmlspecialchars($bike); ?>">
+
+    <label for="driver">Fører:</label>
+    <input type="text" id="driver" name="driver" required value="<?php echo htmlspecialchars($driver); ?>">
 
     <label for="image">Bilde:</label>
     <input type="file" id="image" name="image" accept="image/*">
