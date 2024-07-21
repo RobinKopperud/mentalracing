@@ -8,7 +8,7 @@ nav {
 }
 
 nav.open {
-    height: auto;
+    height: 200px;
 }
 
 /* Navigation links styling */
