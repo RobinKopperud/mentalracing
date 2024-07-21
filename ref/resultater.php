@@ -63,28 +63,22 @@ if ($result->num_rows > 0) {
             </select>
             <button type="submit">Filter</button>
         </form>
-        <div class="timeline">
-            <?php
-            $side = 'left';
-            foreach ($results as $result) {
-                echo '<div class="timeline-event ' . $side . '">';
-                echo '    <div class="timeline-content">';
-                echo '        <div class="image-container">';
-                $image = !empty($result['image']) ? htmlspecialchars($result['image']) : 'default.jpg';
-                echo '            <img src="../uploads/' . $image . '" alt="' . htmlspecialchars($result['race']) . '">';
-                echo '        </div>';
-                echo '        <div class="content">';
-                echo '            <h2>' . htmlspecialchars($result['race']) . '</h2>';
-                echo '            <p>Posisjon: ' . htmlspecialchars($result['position']) . '</p>';
-                echo '            <p>Sykkel: ' . htmlspecialchars($result['bike']) . '</p>';
-                echo '            <p>Tid: ' . htmlspecialchars($result['time']) . '</p>';
-                echo '            <div class="date">' . htmlspecialchars($result['date']) . '</div>';
-                echo '        </div>';
-                echo '    </div>';
-                echo '</div>';
-                $side = ($side === 'left') ? 'right' : 'left';
-            }
-            ?>
+        <div class="results">
+            <?php foreach ($results as $result): ?>
+                <div class="result-item">
+                    <div class="result-image">
+                        <?php $image = !empty($result['image']) ? htmlspecialchars($result['image']) : 'default.jpg'; ?>
+                        <img src="../uploads/<?php echo $image; ?>" alt="<?php echo htmlspecialchars($result['race']); ?>">
+                    </div>
+                    <div class="result-content">
+                        <h3><?php echo htmlspecialchars($result['race']); ?></h3>
+                        <p>Dato: <?php echo htmlspecialchars($result['date']); ?></p>
+                        <p>Posisjon: <?php echo htmlspecialchars($result['position']); ?></p>
+                        <p>Tid: <?php echo htmlspecialchars($result['time']); ?></p>
+                        <p>Sykkel: <?php echo htmlspecialchars($result['bike']); ?></p>
+                    </div>
+                </div>
+            <?php endforeach; ?>
         </div>
     </section>
 </body>

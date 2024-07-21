@@ -1,5 +1,16 @@
 <?php
+session_start();
 include_once '../../db.php'; // Adjust the path as needed
+
+// Ensure user is authenticated
+if (!isset($_SESSION['authenticated'])) {
+    header('Location: ../index.php');
+    exit();
+}
+
+// Initialize variables
+$date = $race = $position = $time = $bike = $image = "";
+$success = $error = "";
 
 // Handle form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -36,13 +47,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <input type="date" id="date" name="date" value="<?php echo htmlspecialchars($date); ?>" required>
     
     <label for="race">Race:</label>
-    <input type="text" id="race" name="race" value="<?php echo htmlspecialchars($race); ?>" optional>
+    <input type="text" id="race" name="race" value="<?php echo htmlspecialchars($race); ?>" required>
     
     <label for="position">Posisjon:</label>
     <input type="number" id="position" name="position" value="<?php echo htmlspecialchars($position); ?>" required>
     
     <label for="time">Tid:</label>
-    <input type="time" id="time" name="time" value="<?php echo htmlspecialchars($time); ?>" required>
+    <input type="text" id="time" name="time" value="<?php echo htmlspecialchars($time); ?>" placeholder="HH:MM:SS" required>
     
     <label for="bike">Sykkel:</label>
     <input type="text" id="bike" name="bike" value="<?php echo htmlspecialchars($bike); ?>" required>
