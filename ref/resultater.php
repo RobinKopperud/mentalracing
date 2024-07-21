@@ -91,9 +91,9 @@ if ($driver_filter) {
     <section class="container">
         <h2>Resultater</h2>
         <form method="GET" action="">
-            <label for="year">Filter by year:</label>
+            <label for="year">ÅR:</label>
             <select id="year" name="year">
-                <option value="">All</option>
+                <option value="">ALLE</option>
                 <?php foreach ($years as $year): ?>
                     <option value="<?php echo $year; ?>" <?php echo ($year_filter == $year) ? 'selected' : ''; ?>>
                         <?php echo $year; ?>
@@ -101,16 +101,16 @@ if ($driver_filter) {
                 <?php endforeach; ?>
             </select>
 
-            <label for="driver">Filter by driver:</label>
+            <label for="driver">Sjåfør:</label>
             <select id="driver" name="driver">
-                <option value="">All</option>
+                <option value="">ALLE</option>
                 <?php foreach ($drivers as $driver): ?>
                     <option value="<?php echo htmlspecialchars($driver); ?>" <?php echo ($driver_filter == $driver) ? 'selected' : ''; ?>>
                         <?php echo htmlspecialchars($driver); ?>
                     </option>
                 <?php endforeach; ?>
             </select>
-            <button type="submit">Filter</button>
+            <button type="submit">Filtrer</button>
         </form>
 
         <?php if ($driver_filter): ?>

@@ -1,10 +1,10 @@
-/* resultater.css */
-
+/* Section title styling */
 section h2 {
     text-align: center;
     margin: 20px 0;
 }
 
+/* Form styling */
 form {
     display: flex;
     justify-content: center;
@@ -23,14 +23,23 @@ form select, form button {
     border-radius: 5px;
     background: #ecf0f1;
     color: #34495e;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+form button:hover {
+    background-color: #bdc3c7;
+}
+
+/* Results grid */
 .results {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
+/* Individual result item */
 .result-item {
     background: #1c1c1c;
     padding: 20px;
@@ -47,6 +56,7 @@ form select, form button {
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Result image styling */
 .result-image img {
     max-width: 100%;
     height: auto;
@@ -54,7 +64,39 @@ form select, form button {
     margin-bottom: 10px;
 }
 
+/* Result content styling */
+.result-content {
+    text-align: center;
+    color: #bdc3c7;
+}
+
+.result-content h3 {
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
 .result-content p {
     margin: 5px 0;
     color: #bdc3c7;
+}
+
+/* Driver summary styling */
+.driver-summary {
+    background: #34495e;
+    color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.driver-summary h3 {
+    margin-top: 0;
+    color: #ecf0f1;
+}
+
+.driver-summary p {
+    margin: 5px 0;
+    color: #ecf0f1;
 }
