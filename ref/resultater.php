@@ -1,6 +1,6 @@
 <?php
 // Include the database connection file
-include_once 'db.php'; // Adjust the path as needed
+include_once '../../db.php'; // Adjust the path as needed
 
 // Fetch results from the database
 $stmt = $pdo->query('SELECT date, race, position, time, bike, image FROM results ORDER BY date DESC');
