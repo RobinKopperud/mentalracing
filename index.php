@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/style.css?v=6.0">
     <link rel="stylesheet" href="css/countdown.css?v=5.0">
     <link rel="stylesheet" href="css/news.css?v=6.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <link rel="stylesheet" href="css/mobile.css?v=6.0" media="screen and (max-width: 768px)">
 </head>
 <body>
@@ -47,6 +49,11 @@
             </div>
         </div>
         <p>til neste race!</p>
+        <div class="race-icons">
+            <i class="fas fa-flag-checkered"></i>
+            <i class="fas fa-tachometer-alt"></i>
+            <i class="fas fa-car"></i>
+        </div>
     </section>
 
     <section id="news" class="content-section">

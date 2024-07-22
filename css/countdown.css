@@ -34,6 +34,23 @@
     font-size: 0.8em;
 }
 
+/* Styles for visual decorations */
+.race-icons {
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+.race-icons i {
+    margin: 0 10px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.race-icons i:hover {
+    color: #f00; /* Change to accent color on hover */
+}
+
+
 /* Mobile-specific styles */
 @media (max-width: 768px) {
     .countdown {
